@@ -1,4 +1,16 @@
-var app1 = new Vue({
-  el: '#app-1',
-  data: {message: 'Hello world!'},
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>',
+});
+
+
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    groceryList: [
+      {id: 0, text: 'Vegetables'},
+      {id: 1, text: 'Cheese'},
+      {id: 2, text: 'Whatever else humans are supposed to eat'},
+    ],
+  },
 });
