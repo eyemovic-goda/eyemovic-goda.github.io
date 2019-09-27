@@ -1,7 +1,4 @@
-const app = new Vue({
-  el: '#app',
-  data: {
-    message: '<h1> hoge </h1>',
-  },
-  
+var app1 = new Vue({
+  el: '#app-1',
+  data: {message: 'Hello world!'},
 });
