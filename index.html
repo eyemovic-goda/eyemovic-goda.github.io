@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Vue Practice</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <meta charset="utf-8">
+    <title>Vue Practice</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 
 
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
 
-  <div id="app">
-    <p>{{ a }}</p>
-    <button v-on:click="a = a+1">Change it</button>
-  </div>
+<div id="app">
+    <p>{{ rawHtml }}</p>
+    <p v-html="rawHtml"></p>
+    <!--<button v-on:click="a = a+1">Change it</button>-->
+</div>
 
-  <script src="assets/js/index.js"></script>
+<script src="assets/js/index.js"></script>
 </body>
 </html>

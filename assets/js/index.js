@@ -1,4 +1,4 @@
-var data = {a: 1};
+var data = {rawHtml: "<span style='color: red;'>これは赤色だよ</span>"};
 var vm = new Vue({
     el: '#app',
     data: data,
