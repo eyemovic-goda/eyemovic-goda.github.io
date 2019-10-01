@@ -1,16 +1,13 @@
-Vue.component('todo-item', {
-  props: ['todo'],
-  template: '<li>{{ todo.text }}</li>',
+var data = {a: 1};
+var vm = new Vue({
+  el: '#app',
+  data: data,
 });
 
 
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
-    groceryList: [
-      {id: 0, text: 'Vegetables'},
-      {id: 1, text: 'Cheese'},
-      {id: 2, text: 'Whatever else humans are supposed to eat'},
-    ],
-  },
+// $watch はインスタンスメソッドです
+vm.$watch('a', function (newValue, oldValue) {
+  // このコールバックは `vm.a` の値が変わる時に呼ばれます
+  console.log('変更前は' + oldValue + 'でした。');
+  console.log('変更後は' + newValue + 'でした。');
 });

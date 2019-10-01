@@ -10,18 +10,9 @@
 </head>
 <body>
 
-  <div id="app-2">
-
-
-    <ol>
-      <todo-item
-        v-for="item in groceryList"
-        v-bind:todo="item"
-        v-bind:key="item.id"
-      ></todo-item>
-    </ol>
-
-
+  <div id="app">
+    <p>{{ a }}</p>
+    <button v-on:click="a = a+1">Change it</button>
   </div>
 
   <script src="assets/js/index.js"></script>
