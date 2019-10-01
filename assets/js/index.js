@@ -1,4 +1,4 @@
-var data = {test: "goda"};
+var data = {isButtonDisabled: true};
 var vm = new Vue({
     el: '#app',
     data: data,
