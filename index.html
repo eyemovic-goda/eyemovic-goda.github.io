@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <title>Vue Practice</title>
@@ -11,9 +11,10 @@
 <body>
 
 <div id="app">
-    <p>{{ rawHtml }}</p>
-    <p v-html="rawHtml"></p>
     <!--<button v-on:click="a = a+1">Change it</button>-->
+
+    <input type="text" v-bind:id="test"/>
+
 </div>
 
 <script src="assets/js/index.js"></script>
