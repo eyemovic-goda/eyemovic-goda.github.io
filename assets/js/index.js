@@ -1,20 +1,6 @@
-var data = {isButtonDisabled: true};
 var vm = new Vue({
     el: '#app',
-    data: data,
-
-    beforeCreate: function () {
-        console.log("before Createしました。");
+    data: {
+        message: "てすとめっせーじ"
     },
-
-    created: function () {
-        console.log("createdしました。");
-    },
-
-    beforeUpdate: function () {
-        console.log("beforeUpdateしました。");
-    },
-    updated: function () {
-        console.log("updatedしました。");
-    }
 });

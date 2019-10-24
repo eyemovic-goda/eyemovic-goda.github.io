@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <title>Vue Practice</title>
@@ -11,10 +11,12 @@
 <body>
 
 <div id="app">
-    <!--<button v-on:click="a = a+1">Change it</button>-->
 
-    <button v-bind:disabled="isButtonDisabled">Button</button>
+    <p>{{message}}</p>
 
+    <p v-once>{{message}}</p>
+
+    <button v-on:click='vm.message="test"'>切り替えボタン</button>
 </div>
 
 <script src="assets/js/index.js"></script>
