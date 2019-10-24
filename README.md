@@ -1,2 +1,2 @@
 # eyemovic-goda.github.io
-チュートリアル
+[チュートリアルをやってみる](https://jp.vuejs.org/v2/guide/)
