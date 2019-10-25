@@ -2,8 +2,9 @@ var vm = new Vue({
     el: '#app',
     data: {
         message: "これがめっさーげ",
-        url: "https://www.google.com/?hl=ja",
-        atr: "href",
+        firstName: "goda",
+        lastName: "kazuki",
+        fullName: "goda kazuki"
     },
     computed: {
         reversedMessage() {
@@ -16,7 +17,17 @@ var vm = new Vue({
 
     methods: {
         now() {
+            console.log("nowが実行されました。");
             return Date.now();
+        },
+    },
+
+    watch: {
+        firstName(val) {
+            this.fullName = val + " " + this.lastName
+        },
+        lastName(val) {
+            this.fullName = this.firstName + " " + val
         }
     }
 });
