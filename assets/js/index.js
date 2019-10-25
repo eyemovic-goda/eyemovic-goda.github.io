@@ -1,10 +1,22 @@
 var vm = new Vue({
     el: '#app',
     data: {
-        message: false,
+        message: "これがめっさーげ",
         url: "https://www.google.com/?hl=ja",
         atr: "href",
     },
-});
+    computed: {
+        reversedMessage() {
+            return this.message.split("").reverse().join("");
+        },
+        test() {
+            return Date.now();
+        },
+    },
 
-vm.url = "https://www.chatwork.com/#!rid144275652";
+    methods: {
+        now() {
+            return Date.now();
+        }
+    }
+});
