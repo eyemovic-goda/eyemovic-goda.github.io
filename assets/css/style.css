@@ -52,3 +52,12 @@ textarea {
 select {
     border: 2px solid #ced4da;
 }
+
+.strike-through {
+    text-decoration: line-through;
+    color: lightgray
+}
+
+.dark {
+    background-color: gray
+}

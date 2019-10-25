@@ -3,25 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>Vue Practice</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-
 <div id="app">
 
-    <p>めせーじは:"{{message}}"</p>
-    <p>反転させるよ:"{{reversedMessage}}"</p>
-    <p>{{test}}</p>
-
-
-    <p>{{now()}}</p>
-
-    <p>{{firstName}}</p>
-    <p>{{lastName}}</p>
-    <p>{{fullName}}</p>
+    <p>{{myName}}</p>
+    <input v-model="myName" placeholder="おなまえ">
 
 </div>
 
