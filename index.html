@@ -11,8 +11,14 @@
 <body>
 <div id="app">
 
-    <p>{{myName}}</p>
-    <input v-model="myName" placeholder="おなまえ">
+
+    <label><input type="radio" v-model="myName" value="ao">あお</label>
+    <label><input type="radio" v-model="myName" value="midori">みどり</label>
+    <label><input type="radio" v-model="myName" value="orengi">おれんじ</label>
+
+
+    <button v-bind:disabled="myName ===''">そうしｎ</button>
+
 
 </div>
 
