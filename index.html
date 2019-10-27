@@ -11,15 +11,11 @@
 <body>
 <div id="app">
 
+    <p>{{count}}</p>
 
-    <label><input type="radio" v-model="myName" value="ao">あお</label>
-    <label><input type="radio" v-model="myName" value="midori">みどり</label>
-    <label><input type="radio" v-model="myName" value="orengi">おれんじ</label>
-
-
-    <button v-bind:disabled="myName ===''">送信</button>
-
-
+    <button v-on:click="countUp(3)">3増やす</button>
+    <button v-on:click="countUp(10)">10増やす</button>
+    <button v-on:click="countUp(100)">100増やす</button>
 </div>
 
 <script src="assets/js/index.js"></script>

@@ -1,8 +1,18 @@
+function iine() {
+    vm.isClick = true;
+}
+
 var vm = new Vue({
     el: '#app',
 
     data: {
-        myName: ''
+        count: 0,
+        isClick: false
     },
-    methods: {}
+    methods: {
+        countUp: function (value) {
+            this.count += value;
+
+        }
+    }
 });
