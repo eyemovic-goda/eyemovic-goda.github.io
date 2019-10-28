@@ -4,7 +4,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="18">
+          <list size="22">
             <item index="0" class="java.lang.String" itemvalue="v-model" />
             <item index="1" class="java.lang.String" itemvalue="v-if" />
             <item index="2" class="java.lang.String" itemvalue="v-bind:title" />
@@ -23,6 +23,10 @@
             <item index="15" class="java.lang.String" itemvalue="v-bind:src" />
             <item index="16" class="java.lang.String" itemvalue="v-bind:style" />
             <item index="17" class="java.lang.String" itemvalue="v-bind:class" />
+            <item index="18" class="java.lang.String" itemvalue="v-model.lazy" />
+            <item index="19" class="java.lang.String" itemvalue="v-model.number" />
+            <item index="20" class="java.lang.String" itemvalue="v-model.number.lazy" />
+            <item index="21" class="java.lang.String" itemvalue="v-model.trim" />
           </list>
         </value>
       </option>

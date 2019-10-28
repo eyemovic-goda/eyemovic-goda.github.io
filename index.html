@@ -11,11 +11,17 @@
 <body>
 <div id="app">
 
-    <p>{{count}}</p>
+    <table>
+        <thead>
+        <th v-for="item in header">{{item}}</th>
+        </thead>
 
-    <button v-on:click="countUp(3)">3増やす</button>
-    <button v-on:click="countUp(10)">10増やす</button>
-    <button v-on:click="countUp(100)">100増やす</button>
+        <tbody>
+        <tr v-for="line in ranking">
+            <td v-for="item in line">{{item}}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 <script src="assets/js/index.js"></script>

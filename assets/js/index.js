@@ -1,18 +1,14 @@
-function iine() {
-    vm.isClick = true;
-}
-
 var vm = new Vue({
     el: '#app',
 
     data: {
-        count: 0,
-        isClick: false
-    },
-    methods: {
-        countUp: function (value) {
-            this.count += value;
-
-        }
+        header: [ "プログラミング言語",2018,2013,2008,2003,1998],
+        ranking: [
+            ['Java',1,2,1,1,16],
+            ['C',2,1,2,2,1],
+            ['C++',3,4,3,3,2],
+            ['Python',4,7,6,11,23],
+            ['JavaScript',7,10,8,7,20]
+        ]
     }
 });
