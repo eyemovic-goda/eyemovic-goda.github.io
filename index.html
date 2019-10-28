@@ -11,17 +11,11 @@
 <body>
 <div id="app">
 
-    <table>
-        <thead>
-        <th v-for="item in header">{{item}}</th>
-        </thead>
+    <ul>
+        <li v-for="item in myArray">{{item}}</li>
+    </ul>
 
-        <tbody>
-        <tr v-for="line in ranking">
-            <td v-for="item in line">{{item}}</td>
-        </tr>
-        </tbody>
-    </table>
+    <button v-on:click="myArray.splice(2,1,222)">おしてみ</button>
 </div>
 
 <script src="assets/js/index.js"></script>
