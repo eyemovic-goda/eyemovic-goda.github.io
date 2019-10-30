@@ -5,18 +5,22 @@
     <title>Vue Practice</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-
+    <!--Vue.js本体のライブラリ-->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!--いい感じのモーションをつけてくれるライブラリ-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+    <!--マークダウン形式のリクエストをHTMLに整形して返却してくれるライブラリ-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js"></script>
+
 </head>
 <body>
 <div id="app">
 
-    <p>{{animeNumber}}</p>
+    <textarea v-model="input"></textarea>
 
-    <p>{{test}}</p>
-
-    <input type="number" v-model.number="myNumber">
+    <div v-html="convertMarkdown"></div>
 </div>
 
 <script src="assets/js/index.js"></script>
