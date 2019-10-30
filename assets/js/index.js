@@ -2,31 +2,32 @@ var vm = new Vue({
     el: '#app',
 
     data: {
-        resetSec: 0,
-        timerObj: null
+        myNumber:0,
+        tweenedNumber:0,
+        myNumber2:0,
+
     },
     methods: {
-        startTimer: function () {
-            this.resetSec = 5;
-
-            this.timerObj = setInterval(() => {
-                this.resetSec--;
-            }, 1000)
-        }
     },
 
     watch: {
-        resetSec: function () {
-            console.log(vm.resetSec);
-
-            if (vm.resetSec <= 0) {
-                console.log(vm.resetSec);
-
-                alert("制限時間です");
-                clearInterval(this.timerObj);
-            }
-
+        myNumber: function () {
+            console.log("ccc");
+            TweenMax.to(this.$data,1,{tweenedNumber: this.myNumber})
         }
-    }
+    },
+
+    computed:{
+        animeNumber:function () {
+            console.log("aaa");
+
+            return this.tweenedNumber;
+        },
+        test:function () {
+
+            return this.myNumber2+this.myNumber;
+        }
+
+    },
 
 });
