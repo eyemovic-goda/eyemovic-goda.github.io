@@ -11,11 +11,8 @@
 <body>
 <div id="app">
 
-    <ul>
-        <li v-for="item in myArray">{{item}}</li>
-    </ul>
-
-    <button v-on:click="myArray.splice(2,1,222)">おしてみ</button>
+    <button v-on:click="startTimer">おしてみ</button>
+    <p>{{resetSec}}</p>
 </div>
 
 <script src="assets/js/index.js"></script>
