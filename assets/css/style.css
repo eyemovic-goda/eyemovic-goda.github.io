@@ -63,16 +63,31 @@ select {
 }
 
 table {
-     width: 100%;
-     text-align: left;
- }
+    width: 100%;
+    text-align: left;
+}
+
 table th {
     padding: 12px;
     border-bottom: 2px solid darkgray;
 }
+
 table td {
     padding: 12px;
 }
+
 table tr:nth-of-type(even) {
     background-color: rgba(0, 0, 255, 0.1);
+}
+
+
+/* 現れている最中と、 消えている最中は、 0.5秒 */
+.v-enter-active, .v-leave-active {
+    transition: 0.5s;
+}
+
+/* 現れる前の状態と、 消えたときの状態は、 透明度0で、 下へ20移動 */
+.v-enter, .v-leave-to {
+    opacity: 0;
+    transform: translateY(20px);
 }
