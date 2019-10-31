@@ -92,6 +92,6 @@ table tr:nth-of-type(even) {
     transform: translateY(20px);
 }
 
-.v-move{
+.v-move {
     transition: 5s;
 }
