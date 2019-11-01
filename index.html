@@ -17,9 +17,9 @@
 </head>
 <body>
 <div id="app">
+    <input type="file" v-on:change="onFileChange">
 
-    <my-component v-for="(item,index) in items" v-bind:my-name="item"></my-component>
-
+    <p>読み込みデータ={{loadData}}</p>
 </div>
 
 <script src="assets/js/index.js"></script>
