@@ -14,21 +14,30 @@
     <!--マークダウン形式のリクエストをHTMLに整形して返却してくれるライブラリ-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js"></script>
 
+    <!--SPAを作成するために使用するRouterライブラリ-->
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
 </head>
 <body>
 <div id="app">
-    <transition-group>
-        <div v-for="item in dataArray" v-bind:key="item.title">
-            <my-product v-bind:object="item"></my-product>
-        </div>
-    </transition-group>
 
-    <button v-on:click="shuffleData">しゃっふる</button>
-    <button v-on:click="sortData">そーと</button>
 
-    <p><input type="file" v-on:change="loadData"></p>
+    <h1>Hello vue-router.js</h1>
+    <p>
+        <router-link to="/qiita">Go to Qiita</router-link>
+    </p>
+
+    <p>
+        <router-link to="/twitter">Go to Twitter</router-link>
+    </p>
+
+    <router-view></router-view>
+
+
 </div>
 
+<script src="assets/js/qiita.js"></script>
+<script src="assets/js/twitter.js"></script>
 <script src="assets/js/index.js"></script>
 </body>
 </html>

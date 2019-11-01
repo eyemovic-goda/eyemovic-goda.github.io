@@ -1,0 +1,1 @@
+var twitter = "<div>twitter</div>";

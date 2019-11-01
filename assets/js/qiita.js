@@ -1,0 +1,1 @@
+var qiita = "<div>qiita</div>";
