@@ -26,7 +26,9 @@ var vm = new Vue({
         "my-component": MyComponent
     },
 
-    data: {},
+    data: {
+        items: ['桃太郎', '浦島太郎', '金太郎', '三年寝太郎', '龍 の子太郎', null]
+    },
     computed: {},
 
     methods: {},

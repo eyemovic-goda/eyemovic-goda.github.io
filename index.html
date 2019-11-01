@@ -18,9 +18,7 @@
 <body>
 <div id="app">
 
-    <my-component my-name="ごうだ"></my-component>
-    <my-component my-name="かずき"></my-component>
-    <my-component></my-component>
+    <my-component v-for="(item,index) in items" v-bind:my-name="item"></my-component>
 
 </div>
 
