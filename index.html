@@ -19,14 +19,22 @@
 <div id="app">
 
     <transition-group>
-        <li v-for="item in items" v-bind:key="item">{{item}}</li>
+        <div v-for="todo in todos" v-bind:key="todo">
+            <label>
+                <input type="checkbox" v-model="todo.done">
+                <span v-bind:class="{donestyle:todo.done}">{{todo.text}}</span>
+            </label>
+
+        </div>
     </transition-group>
 
-    <label><input v-model="addItem" placeholder="追加するリスト"></label>
-    <button v-on:click="addList">追加</button>
-    <button v-on:click="removeLast">最後の1つを削除</button>
-    <button v-on:click="shuffleData">シャッフル</button>
-    <button v-on:click="sortData">そーとします</button>
+
+    <p>{{remaining}}/{{todos.length}}件処理しました。</p>
+
+    <input style="width: 300px;" type="text" v-model.trim="addText" placeholder="エンターキーで送信してね"
+           v-on:keyup.enter="addToDo">
+    <button v-on:click="cleanToDo">処理済みを削除</button>
+
 
 </div>
 

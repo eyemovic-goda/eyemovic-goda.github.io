@@ -83,7 +83,7 @@ table tr:nth-of-type(even) {
 
 /* 現れている最中と、 消えている最中は、 0.5秒 */
 .v-enter-active, .v-leave-active {
-    transition: 5s;
+    transition: 1s;
 }
 
 /* 現れる前の状態と、 消えたときの状態は、 透明度0で、 下へ20移動 */
@@ -93,5 +93,10 @@ table tr:nth-of-type(even) {
 }
 
 .v-move {
-    transition: 5s;
+    transition: 1s;
+}
+
+.donestyle {
+    text-decoration: line-through;
+    color: lightgray;
 }

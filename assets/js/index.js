@@ -2,41 +2,45 @@ var vm = new Vue({
     el: '#app',
 
     data: {
-        addItem: "",
-        items: ["one", "two", "three", "for", "five"]
-
+        addText: "",
+        todos: [
+            {done: false, text: "パンを買う"},
+            {done: false, text: "コーヒーを買う"}
+        ]
     },
+    computed: {
+        /**
+         * 何件処理したかを計算する。
+         * @returns {number}
+         */
+        remaining: function () {
+            return this.todos.filter(function (val) {
+                return val.done;
+            }).length
+
+        }
+    },
+
     methods: {
-        addList: function () {
-            this.items.push(this.addItem);
-            this.addItem = "";
-        },
-        removeLast: function () {
-            this.items.splice(this.items.length - 1, 1)
-
-        },
-        sortData: function () {
-            this.items.sort(function (a, b) {
-                if (a < b) return -1;
-                if (a > b) return 1;
-                return 0;
-            })
-        },
-        shuffleData: function () {
-            var buffer = [];
-            var len = this.items.length;
-            for (var i = len; len > 0; len--) {
-                var r = Math.floor(Math.random() * len);
-
-                buffer.push(this.items[r]);
-                this.items.splice(r, 1);
+        addToDo: function () {
+            if (this.addText === "") {
+                return
             }
-            this.items = buffer;
+
+            this.todos.push({done: false, text: this.addText});
+            this.addText = "";
         },
+
+        /**
+         * doneがtrueなら削除する
+         */
+        cleanToDo: function () {
+            this.todos = this.todos.filter(function (val) {
+                return val.done === false;
+            });
+        }
     },
 
     watch: {},
-
-    computed: {},
 
 });
