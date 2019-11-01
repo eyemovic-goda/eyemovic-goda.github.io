@@ -17,9 +17,16 @@
 </head>
 <body>
 <div id="app">
-    <input type="file" v-on:change="onFileChange">
+    <transition-group>
+        <div v-for="item in dataArray" v-bind:key="item.title">
+            <my-product v-bind:object="item"></my-product>
+        </div>
+    </transition-group>
 
-    <p>読み込みデータ={{loadData}}</p>
+    <button v-on:click="shuffleData">しゃっふる</button>
+    <button v-on:click="sortData">そーと</button>
+
+    <p><input type="file" v-on:change="loadData"></p>
 </div>
 
 <script src="assets/js/index.js"></script>
