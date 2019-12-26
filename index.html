@@ -1,43 +1,48 @@
-<!DOCTYPE html>
-<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>Vue Practice</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>タイトル</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <!--Vue.js本体のライブラリ-->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-    <!--いい感じのモーションをつけてくれるライブラリ-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-
-    <!--マークダウン形式のリクエストをHTMLに整形して返却してくれるライブラリ-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js"></script>
-
-    <!--SPAを作成するために使用するRouterライブラリ-->
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-
+    <!-- Bootstrap用JavaScriptの読み込み -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div id="app">
 
+<main class="p-3">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a href="#photo1" class="nav-link active" data-toggle="tab">タブ１</a>
+        </li>
+        <li class="nav-item">
+            <a href="#photo2" class="nav-link" data-toggle="tab">タブ2</a>
+        </li>
+        <li class="nav-item">
+            <a href="#photo3" class="nav-link" data-toggle="tab">タブ3</a>
+        </li>
+        <li class="nav-item">
+            <a href="#photo4" class="nav-link" data-toggle="tab">タブ4</a>
+        </li>
+    </ul>
 
-    <h1>Hello vue-router.js</h1>
-    <p>
-        <router-link to="/qiita">Go to Qiita</router-link>
-    </p>
+    <div class="tab-content mt-3">
+        <div id="photo1" class="tab-pane active">
+            <img src="https://i.picsum.photos/id/379/200/300.jpg">
+        </div>
+        <div id="photo2" class="tab-pane">
+            <img src="https://i.picsum.photos/id/287/200/300.jpg">
+        </div>
+        <div id="photo3" class="tab-pane">
+            <img src="https://i.picsum.photos/id/858/200/300.jpg">
+        </div>
+        <div id="photo4" class="tab-pane">
+            <img src="https://i.picsum.photos/id/1041/200/300.jpg">
+        </div>
+    </div>
+</main>
 
-    <p>
-        <router-link to="/twitter">Go to Twitter</router-link>
-    </p>
-
-    <router-view></router-view>
-
-
-</div>
-
-<script src="assets/js/qiita.js"></script>
-<script src="assets/js/twitter.js"></script>
-<script src="assets/js/index.js"></script>
 </body>
 </html>
